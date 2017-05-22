@@ -1,0 +1,27 @@
+<ion-view cache-view = "false" view-title="MODICARE PRODUCTS" ng-controller="productSearch" data-ng-init="init()">
+  <ion-content class="padding" >
+	   
+   <!-- <h2>Product search</h2>-->
+   <div class="list list-inset">
+  <label class="item item-input">
+    <i class="icon ion-search placeholder-icon"></i>
+    <input type="text" ng-model='productName' placeholder="Search" ng-change="getproductlist()">
+  </label>
+</div>
+   <!--<a href="#/tab/state1">click</a>
+   -->
+   
+   
+  
+   <ion-item ng-repeat="p in productList|filter:productName|limitTo:10">
+      {{p.ProductName}}
+     
+   </ion-item>
+	 <!---->
+	
+	</ion-list>
+	
+   
+	
+  </ion-content>
+</ion-view>
